@@ -1,0 +1,73 @@
+# 🌐 Informazioni generali sul sito
+title: SOS Gemini
+description: "Consigli pratici su alimentazione, salute, animali, lavoro e fai da te"
+lang: it
+url: "https://sosgemini.github.io"
+baseurl: ""  # ← lascia vuoto se il sito è nella root del repo GitHub Pages
+
+# 📁 Struttura delle cartelle
+source: .
+destination: ./_site
+includes_dir: _includes
+layouts_dir: _layouts
+
+# 🎨 Configurazione Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# ✍️ Markdown e rendering
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+
+# 🔌 Plugin attivi (supportati da GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 🚫 File e cartelle da escludere dalla build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .github
+  - .gitignore
+  - package.json
+  - yarn.lock
+
+# 🔗 URL puliti
+permalink: pretty
+
+# 📚 Collezione pagine (corretta)
+collections:
+  pagine:
+    output: true
+    permalink: /pagine/:name/
+
+# 🧱 Layout di default per la collezione "pagine"
+defaults:
+  - scope:
+      path: ""
+      type: "pagine"
+    values:
+      layout: default
+
+# 🗺️ Sitemap automatica
+sitemap:
+  filename: sitemap.xml
+  exclude:
+    - robots.txt
+
+# 🤖 Robots.txt incluso nella root
+include:
+  - robots.txt
+
+# 🚫 Tema GitHub Pages disattivato per usare layout personalizzati
+# ⚠️ Se usi layout tuoi, rimuovi questa riga:
+# theme: jekyll-theme-primer

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sosgemini.github.io/sitemap.xml
